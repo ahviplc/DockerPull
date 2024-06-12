@@ -14,11 +14,14 @@ public class CommandStartup {
 
     public static void main(String[] args)
         throws URISyntaxException, IOException, InterruptedException {
-        if (args.length == 0){
-            log.info("Usage: java -jar docker-pull.jar <image> <proxyUrl> <proxyPort>");
-            return;
-        }
-        DockerPull.pull(args[0], args[1], Integer.parseInt(args[2]));
+//        if (args.length == 0){0
+//            log.info("Usage: java -jar docker-pull.jar <image> <proxyUrl> <proxyPort>");
+//            return;
+//        }
+//        DockerPull.pull(args[0], args[1], Integer.parseInt(args[2]));
+
+//        DockerPull.pull("hello-world", "192.168.192.192", 7893);
+        DockerPull.pull("hello-world:latest", "192.168.192.192", 7893);
     }
 
 }
