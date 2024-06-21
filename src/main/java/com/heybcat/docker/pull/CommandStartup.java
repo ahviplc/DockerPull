@@ -21,6 +21,8 @@ public class CommandStartup {
 //        DockerPull.pull(args[0], args[1], Integer.parseInt(args[2]));
 
 //        DockerPull.pull("hello-world", "192.168.192.192", 7893);
+//        DockerPull.pull("nginx:latest", "192.168.192.192", 7893);
+
         DockerPull.pull("hello-world:latest", "192.168.192.192", 7893);
     }
 

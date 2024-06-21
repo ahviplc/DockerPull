@@ -1,6 +1,9 @@
 package com.heybcat.docker.pull.core;
 
 import com.alibaba.fastjson2.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -8,8 +11,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @author Fetters
@@ -39,6 +40,7 @@ public class DockerAuth {
 
         HttpClient httpClient = ClientBuilder.build(proxyUrl, proxyPort);
 
+        // https://auth.docker.io/token?service=registry.docker.io&scope=repository:library/nginx:pull
         URI uri = new URI(buildAuthUrl(image));
 
         HttpRequest request = HttpRequest.newBuilder().uri(uri).build();
