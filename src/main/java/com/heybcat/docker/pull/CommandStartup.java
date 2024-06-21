@@ -1,6 +1,7 @@
 package com.heybcat.docker.pull;
 
 import com.heybcat.docker.pull.core.DockerPull;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.logging.Logger;
@@ -10,10 +11,10 @@ import java.util.logging.Logger;
  */
 public class CommandStartup {
 
-    static Logger log = Logger.getLogger(CommandStartup.class.getName());
+	static Logger log = Logger.getLogger(CommandStartup.class.getName());
 
-    public static void main(String[] args)
-        throws URISyntaxException, IOException, InterruptedException {
+	public static void main(String[] args)
+			throws URISyntaxException, IOException, InterruptedException {
 //        if (args.length == 0){0
 //            log.info("Usage: java -jar docker-pull.jar <image> <proxyUrl> <proxyPort>");
 //            return;
@@ -22,8 +23,7 @@ public class CommandStartup {
 
 //        DockerPull.pull("hello-world", "192.168.192.192", 7893);
 //        DockerPull.pull("nginx:latest", "192.168.192.192", 7893);
-
-        DockerPull.pull("hello-world:latest", "192.168.192.192", 7893);
-    }
-
+//        DockerPull.pull("hello-world:latest", "192.168.192.192", 7893);
+		DockerPull.pull("nginx:latest", "192.168.198.87", 7893);
+	}
 }
